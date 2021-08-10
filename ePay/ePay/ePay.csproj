@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9131753-25E5-4D99-A318-660F83030545}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ePay</RootNamespace>
+    <AssemblyName>ePay</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\..\..\Music\Framework\Guna UI\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="LollipoUi">
+      <HintPath>..\..\..\..\..\..\..\Music\Framework\LolliPo\LollipoUi.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\..\..\Music\Framework\Metro\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\..\Music\Framework\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions">
+      <HintPath>..\..\..\..\..\..\..\Music\Framework\Transitions.dll</HintPath>
+    </Reference>
+    <Reference Include="XanderUI">
+      <HintPath>..\..\..\..\..\..\..\Music\Framework\Xender UI\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BussinessLayer\Authentication.cs" />
+    <Compile Include="BussinessLayer\BrandBL.cs" />
+    <Compile Include="BussinessLayer\CategoryBL.cs" />
+    <Compile Include="BussinessLayer\EmployeeBL.cs" />
+    <Compile Include="BussinessLayer\ProductBL.cs" />
+    <Compile Include="Components\Brand\subItems\fmBrandCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Brand\subItems\fmBrandCreate.Designer.cs">
+      <DependentUpon>fmBrandCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Brand\subItems\ucBrandItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Brand\subItems\ucBrandItem.Designer.cs">
+      <DependentUpon>ucBrandItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Brand\ucBrand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Brand\ucBrand.Designer.cs">
+      <DependentUpon>ucBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Category\subItems\fmCategoryCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Category\subItems\fmCategoryCreate.Designer.cs">
+      <DependentUpon>fmCategoryCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Category\subItems\ucCategoryItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Category\subItems\ucCategoryItem.Designer.cs">
+      <DependentUpon>ucCategoryItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Category\ucCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Category\ucCategory.Designer.cs">
+      <DependentUpon>ucCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DashboardControl\subItems\ucHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\DashboardControl\subItems\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DashboardControl\ucDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\DashboardControl\ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Product\subItems\fmCreateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Product\subItems\fmCreateProduct.Designer.cs">
+      <DependentUpon>fmCreateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Product\subItems\ucNotRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Product\subItems\ucNotRow.Designer.cs">
+      <DependentUpon>ucNotRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Product\subItems\ucProductItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Product\subItems\ucProductItem.Designer.cs">
+      <DependentUpon>ucProductItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Product\ucProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Product\ucProduct.Designer.cs">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\IGenericRepository.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\DataAccess.cs" />
+    <Compile Include="Entity\Auth.cs" />
+    <Compile Include="Entity\Brand.cs" />
+    <Compile Include="Entity\Category.cs" />
+    <Compile Include="Entity\Employee.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Functions\ConvertBlob.cs" />
+    <Compile Include="Functions\instanceComponent.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\MsShow.cs" />
+    <Compile Include="Functions\Password_hash.cs" />
+    <Compile Include="MsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgBox.Designer.cs">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBoxOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgBoxOk.Designer.cs">
+      <DependentUpon>MsgBoxOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm\WaitProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm\WaitProgress.Designer.cs">
+      <DependentUpon>WaitProgress.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Components\Brand\subItems\fmBrandCreate.resx">
+      <DependentUpon>fmBrandCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Brand\subItems\ucBrandItem.resx">
+      <DependentUpon>ucBrandItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Brand\ucBrand.resx">
+      <DependentUpon>ucBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Category\subItems\fmCategoryCreate.resx">
+      <DependentUpon>fmCategoryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Category\subItems\ucCategoryItem.resx">
+      <DependentUpon>ucCategoryItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Category\ucCategory.resx">
+      <DependentUpon>ucCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\DashboardControl\subItems\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\DashboardControl\ucDashboard.resx">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Product\subItems\fmCreateProduct.resx">
+      <DependentUpon>fmCreateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Product\subItems\ucNotRow.resx">
+      <DependentUpon>ucNotRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Product\subItems\ucProductItem.resx">
+      <DependentUpon>ucProductItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Product\ucProduct.resx">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBoxOk.resx">
+      <DependentUpon>MsgBoxOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm\WaitProgress.resx">
+      <DependentUpon>WaitProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_filled_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible_filled_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graduation-cuate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Questions-amico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\400 Error Bad Request-rafiki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning-cuate.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
