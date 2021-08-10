@@ -16,6 +16,10 @@ The application is at an early stage and for now I'm developing the most common 
 
 <img src="./assets/198133234_500063734565074_1678870967397493522_n.jpg" width="2000">
 
+Brand registration
+
+<img src="./assets/198562785_109875841226211_2782709215264981027_n.jpg" width="2000">
+
 
 **Present layers of the project**
 
