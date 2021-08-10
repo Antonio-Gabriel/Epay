@@ -20,6 +20,10 @@ Brand registration
 
 <img src="./assets/198562785_109875841226211_2782709215264981027_n.jpg" width="2000">
 
+Adding brand
+
+<img src="./assets/199722186_796850974531872_7440536043378300630_n.jpg" width="2000">
+
 
 **Present layers of the project**
 
